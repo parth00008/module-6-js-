@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 80%;
+            margin: 0 auto;
+            background-color: rgb(196, 213, 230);
+        }
+
+        details {
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        summary {
+            width: 50%;
+            font-size: 18px;
+        }
+
+        details img {
+            width: 450px;
+        }
+
+        details p {
+            background-color: rgba(52, 221, 221, 0.5);
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        details li {
+            padding: 0px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Module (JAVASCRIPT BASIC & DOM) – 4</h1>
+    </center>
+    <!--  -->
+    <details>
+        <summary>
+            <span> What is JavaScript. How to use it?</span>
+        </summary>
+        <ul>
+            <li>JavaScript is Event base programing language.</li>
+            <li>JavaScript apply to website functionality and restriction.</li>
+        </ul>
+        <img src="/img/q.1.jpg" alt="Q-1">
+    </details>
+    <!--  -->
+    <details>
+        <summary>
+            <span> How many type of Variable in JavaScript?</span>
+        </summary>
+        <p>
+            There are three types of Variable in JavaScript:- <br>
+            1) var. <br>
+            2) let. <br>
+            3) const.
+        </p>
+    </details>
+    <!--  -->
+    <details>
+        <summary>
+            <span> Define a Data Types in js?</span>
+        </summary>
+        <p>
+            In JavaScript, data types define the type of values that can be used in the program.
+        </p>
+    </details>
+    <!--  -->
+    <details>
+        <summary>
+            <span>Write a mul Function Which will Work Properly When invoked With Following Syntax?</span>
+        </summary>
+        <p>
+            function mul() { <br>
+            if (arguments.length === 0) { <br>
+            return 0; <br>
+            } else if (arguments.length === 1) { <br>
+            return arguments[0]; <br>
+            } else { <br>
+            let result = 1; <br>
+            for (let i = 0; i < arguments.length; i++) { result *=arguments[i]; } return result; } } <br>
+                console.log(mul());<br> console.log(mul(5));<br> console.log(mul(2, 3)); <br>
+                console.log(mul(2, 3, 4));<br> console.log(mul(2, 3, 4, 5)); <br>
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>
+            <span> What the deference between undefined and undeclare in JavaScript?</span>
+        </summary>
+        <p>
+            undefined: <br>
+            let x; <br>
+            console.log(x); <br><br>
+            let obj = {};<br>
+            console.log(obj.prop);<br> <br>
+            undeclare: <br>
+            console.log(y);
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>
+            <span> Using console.log() print out the following statement: The quote 'There is no exercise
+                better for the heart than reaching down and lifting people up.' by John Holmes teaches us to
+                help one another. Using console.log() print out the following quote by Mother Teresa?</span>
+        </summary>
+        <p>
+            console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.'
+            by John Holmes teaches us to help one another."); <br>
+
+            console.log("I have found the paradox, that if you love until it hurts, there can be no more hurt, only more
+            love. - Mother Teresa");
+            <img src="/img/q-6.jpg" alt="Q-6">
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>
+            <span>  Check if typeof '10' is exactly equal to 10. If not make it exactly equal?</span>
+        </summary>
+        <p>
+            var stringNumber = '10'; <br>
+            if (typeof stringNumber === 'number') {<br>
+            console.log("stringNumber is already a number.");<br>
+            } else {<br>
+            var convertedNumber = parseInt(stringNumber);<br>
+            console.log("Converted number:", convertedNumber);<br>
+            } <br>
+            <img src="/img/q.7.jpg" alt="Q-7">
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>
+            <span> Write a JavaScript Program to find the area of a triangle?</span>
+        </summary>
+        <p>
+            function calculateTriangleArea(base, height) { <br>
+            if (base > 0 && height > 0) { <br>
+            let area = 0.5 * base * height; <br>
+            return area; <br>
+            } else { <br>
+            return "Base and height must be positive numbers."; <br>
+            } <br>
+            } <br> <br>
+            // Example usage
+            let base = 5; <br>
+            let height = 8; <br>
+            let area = calculateTriangleArea(base, height); <br>
+            document.write("Area of the triangle with base", base, "and height", height, "is", area")
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>
+            <span> Write a JavaScript program to calculate days left until next Christmas?</span>
+        </summary>
+        <p>
+            function daysUntilChristmas() {<br>
+            let currentDate = new Date();<br>
+            let currentYear = currentDate.getFullYear();<br>
+            let christmasDate = new Date(currentYear, 11, 25); <br>
+            if (currentDate > christmasDate) { <br>
+            christmasDate.setFullYear(currentYear + 1);<br>
+            }<br>
+            let timeDifference = christmasDate.getTime() - currentDate.getTime();<br>
+            let daysLeft = Math.ceil(timeDifference / (1000 * 3600 * 24));<br>
+
+            return daysLeft;<br>
+            } <br> <br>
+            let daysLeftUntilChristmas = daysUntilChristmas(); <br>
+            document.write("Days left until next Christmas:", daysLeftUntilChristmas);
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>
+            <span> What is Condition Statement?</span>
+        </summary>
+        <p>
+            A condition statement, often referred to as a conditional statement or conditional expression, is a
+            programming construct that allows you to execute different blocks of code based on whether a specified
+            condition evaluates to true or false. Conditional statements are fundamental in programming as they enable
+            the implementation of decision-making logic within the code.
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary> Find circumference of Rectangle formula : C = 4 * a ?</summary>
+        <p>
+            Here is the formula to find a rectangle's perimeter:
+
+
+            𝑃 = 2 (𝑙 + 𝑤 ) P = 2(l + w)
+
+            When the width is denoted by w and the length by l.
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>WAP to convert years into days and days into years?</summary>
+        <p>
+            function yearsToDays(years) { <br>
+            // Assume a year has 365 days <br>
+            const days = years * 365; <br>
+            return days; <br>
+            }<br><br>
+
+            function daysToYears(days) { <br>
+            // Assume a year has 365 days <br>
+            const years = days / 365; <br>
+            return years; <br>
+            } <br>
+
+            // Example usage: <br>
+            const years = 5; <br>
+            const daysFromYears = yearsToDays(years);<br>
+            console.log(`${years} years is approximately ${daysFromYears} days.`); <br>
+            <br>
+            const days = 1825;<br>
+            const yearsFromDays = daysToYears(days);<br>
+            console.log(`${days} days is approximately ${yearsFromDays.toFixed(2)} years.`);
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Convert temperature Fahrenheit to Celsius? (Conditional logic Question)</summary>
+        <p>
+            function fahrenheitToCelsius(fahrenheit) { <br>
+            if (typeof fahrenheit !== 'number') { <br>
+            return 'Input must be a number'; <br>
+            } <br>
+            let celsius = (fahrenheit - 32) * 5 / 9;<br>
+            return celsius;<br>
+            }<br>
+            <br>
+            // Example usage:<br>
+            let fahrenheitTemperature = 100; // You can change this value to any Fahrenheit temperature you want to
+            convert<br>
+            let celsiusTemperature = fahrenheitToCelsius(fahrenheitTemperature);<br>
+            console.log(`${fahrenheitTemperature}°F is ${celsiusTemperature.toFixed(2)}°C`);<br>
+
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>How can the style/class of an element be changed?</summary>
+        <p>
+            This article will teach us how to modify an element's style or class. The UI is
+            crucial if you want to create a cool website or app. With the use of JavaScript, any
+            CSS property from an HTML element can be modified, added, or removed in
+            response to any event. We are able to complete this work using one of two popular
+            methods.
+        </p>
+        <ul style="padding-left: 2%;">
+            <li> style.property </li>
+            <li> Changing the class itself </li>
+        </ul>
+        <p><strong>Approach :</strong>CSS can be modified using the style property to:</p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            document.getElementById("id").style.property = new_style
+        </div>
+        <p>
+            <strong>Example:</strong> In this instance, a PAN number validator has been constructed. We will
+            first use a regex pattern to match the input value. If it does, add an inline style to
+            the p tag using JavaScript. If not, change the style of the p tag.
+        </p>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt;!DOCTYPE html&gt; <br>
+            &lt;html lang="en"&gt; <br>
+            &lt;body&gt; <br>
+            &lt;h2&gt; How can the style/class of an element be changed? &lt;/h2&gt; <br>
+            &lt;b&gt; Validate Pan Number&lt;/b&gt; <br>
+            &lt;input type="text" id="pan" /&gt; <br>
+            &lt;p>&lt;/p&gt; <br>
+            &lt;button id="submit">Validate&lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            const btn = document.getElementById("submit"); <br>
+            btn.addEventListener("click", function () { <br>
+            const pan = document.getElementById("pan").value; <br>
+            const para = document.querySelector("p"); <br>
+            let regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/; <br>
+            if (regex.test(pan.toUpperCase())) { <br>
+            para.innerHTML = "Hurrey It's correct"; <br>
+            // Inline style <br>
+            para.style.color = "green"; <br>
+            } else { <br>
+            para.innerHTML = "OOps It's wrong!"; <br>
+            // Inline style <br>
+            para.style.color = "red"; <br>
+            } <br>
+            }); <br>
+            &lt;/script&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <p><label for=""><strong>Validate Pan Number </strong></label><input type="text"><br> validate </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>How to read and write a file using JavaScript?</summary>
+        <p>
+            File reading and writing are not supported on the client side by JavaScript
+            browsers. The Node.js fs module can be used for this on the server-side. It has
+            techniques for reading and writing files on the file system that are both synchronous and asynchronous.
+            Several examples of the node.js fs module reading
+            and writing files will be displayed.
+        </p>
+        <p>
+            To read and write files, utilize Javascript's fs.readFile() and rs.writeFile() APIs.
+            The file is read via an internal technique called fs.readFile(). This approach reads
+            the entire file into memory and stores it in a buffer.
+        </p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            fs.readFile( file_name, encoding, callback_function )
+        </div>
+        <br>
+        <h2>Parameters:</h2>
+        <br>
+        <ul style="padding-left: 2%;">
+            <li> <strong>filename:</strong> It includes the filename to read or, if the file was saved
+                somewhere else, the entire path.</li>
+            <li>The encoding of the file is kept there. The default value is 'utf8'.</li>
+            <li>This is a <strong> callback function </strong> that is used after the file has been read. There are two
+                inputs needed.</li>
+            <li><strong>err:</strong> if there was a mistake</li>
+            <li><strong>data:</strong> The contents of the file</li>
+            <li><strong>Return Value:</strong> It provides both the file's contents and any faults that might
+                have happened.</li>
+        </ul>
+        <p>
+            Data is written asynchronously to files using the fs.writeFile() function. The file
+            will be replaced if it already exists.
+        </p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            fs.writeFile( file_name, data, options, callback )
+        </div>
+        <br>
+        <h2>Parameters:</h2>
+        <br>
+        <ul style="padding-left: 2%;">
+            <li>&lt;file_name: &lt;strong=""&gt;The location of the file to be written is
+                specified by a string, buffer, URL, or integer file description. A file
+                descriptor will perform similarly to the fs. write() method when
+                used.&lt;/file_name&gt;</li>
+            <li>data: A string, buffer, typed array, or data view are the possible types
+                of data that will be transmitted to the file.
+            </li>
+            <li>options: This string or object can be used to denote output options that
+                are optional. There are three other criteria available for selection.</li>
+            <li>The string value encoding describes the file's encoding. The default
+                value is 'utf8'.</li>
+            <li>mode is an integer number that indicates the file mode. The default
+                value is 0o666.</li>
+            <li>flag: This string represents the flag for writing files. The default value is
+                "w."
+            </li>
+            <li>callback: When the method is executed, this function is called.</li>
+            <li>Err: This is the error that will be thrown if the process fails.</li>
+        </ul>
+        <p>
+            Let's use the following example to explain how to write and read files: <br>
+            The writeFile() method is used to create the file in the example below, and the
+            readFile() method is used to read its contents.
+        </p>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            var fs = require("fs"); <br>
+            console.log(" Writing into an file "); <br>
+            // Sample.txt is an empty file <br>
+            fs.writeFile( <br>
+            "sample.txt", <br>
+            "Let's write a few sentences in the file", <br>
+            function (err) { <br>
+            if (err) { <br>
+            return console.error(err); <br>
+            } <br>
+            // If no error the remaining code executes <br>
+            console.log(" Finished writing "); <br>
+            console.log("Reading the data that's written"); <br>
+            // Reading the file <br>
+            fs.readFile("sample.txt", function (err, data) { <br>
+            if (err) { <br>
+            return console.error(err); <br>
+            } <br>
+            console.log("Data read : " + data.toString()); <br>
+            }); <br>
+            } <br>
+            ); <br>
+        </div>
+    </details>
+    <!-- -->
+    <details>
+        <summary>What are all the looping structures in JavaScript?</summary>
+        <p>In the last chapter, we discovered how to use conditional statements in
+            JavaScript by using practical programs.</p>
+        <p>
+            We learn about looping and jump control statements in this chapter. Code
+            blocks can be run in loops as many times as necessary.
+        </p>
+        <br>
+        <strong>In JavaScript, the following looping statements are supported:</strong>
+        <br>
+        <br>
+        <h2>For Loop Statement</h2>
+        <p>
+            When a loop is used, it performs the three specified tasks (Statement 1,
+            Statement 2, Statement 3) a fixed number of times. The general syntax of the
+            "for" statement is demonstrated in the following code.
+        </p>
+        <br>
+        <h2> Syntax </h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            for (initialization; condition; increment/ decrement) <br>
+            { <br>
+            Executed these statements; <br>
+            } <br>
+        </div>
+        <br>
+        <h2> While Loop Statement </h2>
+        <br>
+        <p>
+            Of all looping statements, the while one is the most straightforward. While a
+            particular condition is true, a block of code is repeated in a while loop. The
+            three distinct jobs have been carried out in the for loop. The same three
+            specific activities are carried out in the while loop as well as where it is
+            mentioned in the statement, but the initialization and conditions of the while
+            loop take place in various locations. The code below demonstrates the while
+            statement's basic syntax:
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            while (condition) <br>
+            { <br>
+            Execute these statements; //true <br>
+            Increment/decrement; <br>
+            } <br>
+        </div>
+        <br>
+        <h2>do-while Statement</h2>
+        <br>
+        <p>
+            The while statement and the do-while statement are related. The condition is
+            present outside the statement in the do-while construct. If the condition is not
+            met, it will still run at least once. If the condition is true, the code will continue
+            to run; if the condition is false, the code will cease running. The general syntax
+            of the while statement is shown in the following code:
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            do <br>
+            { <br>
+            Execute the statements; <br>
+            Increment/decrements; <br>
+            } <br>
+            while (condition) //true <br>
+        </div>
+
+    </details>
+   <!-- -->
+    <details>
+        <summary>How can you convert the string of any base to an integer in JavaScript?</summary>
+        <p>
+            JavaScript uses the parseInt(), Number(), and Unary operator (+) functions to
+            convert a string to an integer. When the string doesn't contain a number, the
+            parseInt() function returns NaN (not a number). Only the specified number
+            will be returned if a string containing a number is given. Spaces are not
+            permitted in this function. If a specific number is supplied with spaces, the
+            portion of the number that appears before the space is returned as the output.
+        </p>
+        <p>
+            We can use the parseInt(), Number(), and Unary operator (+) to turn a string
+            into an integer. An illustration is used to discuss each of them.
+        </p>
+        <p>
+            <strong> Using the parseInt() method </strong> <br>
+            <strong>The parseInt() method's syntax is</strong> <br> <br>
+        </p>
+        <div style="background-color: lightgray;padding: 10px;">
+            parseInt(string); parseInt(string,radix);
+        </div>
+        <p>
+            Where, <br>
+            The string to be parsed is called string. <br>
+            In the Number System, the radix is used to refer to the basis. 8 is octal, 10 is <br>
+            decimal, 16 is hexadecimal, and 2 is binary. <br>
+            The integer value that was extracted from the string is returned by this <br>
+            procedure. <br>
+            Using the Number() method <br>
+            The Number() method's syntax is <br>
+        </p>
+        <div style="background-color: lightgray;padding: 10px;">
+            Number(value)
+        </div>
+        <p>
+            If value is not of a primitive data type that can be converted to a number, NaN
+            is returned. A number is returned by this procedure. <br>
+            <strong> Using the unary operator </strong> <br>
+            <strong> The unary plus operator's syntax is. </strong>
+        </p>
+        <p>
+            If value is not of a primitive data type that can be converted to a number, NaN
+            is returned. A number is returned by this procedure. <br>
+            Using the unary operator <br>
+            The unary plus operator's syntax is. <br>
+        </p>
+        <div style="background-color: lightgray;padding: 10px;">
+            +op;
+        </div>
+        <p>
+            where an operand is op. The unary operator + tries to turn the operand into a
+            number when it is put before it. The response is a number.
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>What is the function of the delete operator?</summary>
+        <p>
+            An object, an object's property, or an element from an array can all be
+            deleted using the delete operator. Variables that are not declared using the
+            var statement can likewise be deleted by the operator.
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            delete objectName delete objectName.property delete objectName[index] <br>
+            delete property // The command acts only within a with statement. <br>
+        </div>
+        <p><strong>
+                Parameters <br>
+                objectName: An object's name. <br>
+                property: The property already exists. <br>
+                index: An integer that represents the index of the array. <br>
+            </strong></p>
+    </details>
+   <!-- -->
+    <details>
+        <summary>What are all the types of Pop up boxes available in JavaScript?</summary>
+        <p><strong>In general, javascript supports three different forms of pop-up boxes:
+            </strong></p>
+        <br>
+        <h2>Alert: A message with an OK button is all that is shown.</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an alert box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            alert("Hello! Welcome to home!"); <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <br>
+        <h2>Confirm -- A confirmation message window with an OK and Cancel button appears. </h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an confirm box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            confirm("Press a button!"); <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <br>
+        <h2>Prompt: A dialog window asking for the user's input then displays
+            confirmation buttons.</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an prompt box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;p id ="demo"&gt;&lt;/p&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            var person = prompt("Please enter your name", "panchal"); <br>
+            if (person != null) { <br>
+            document.getElementById("demo").innerHTML = <br>
+            "Hello " + person + "! How are you today?"; <br>
+            } <br>
+            } <br>
+
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+    </details>
+   <!-- -->
+    <details>
+        <summary>What is the use of Void (0)?</summary>
+        <p>
+            "javascript:void(0)" may have occasionally appeared in an HTML document.
+            It is frequently used when adding an expression to a web page can have
+            unintended consequences. The command "javascript:void(0)" is used to
+            reverse this effect. This expression yields a primitive value that is undefinable.
+            This is frequently applied to hyperlinks. You may occasionally choose to
+            execute some JavaScript from a link. Depending on the URL provided, the
+            browser typically loads a fresh copy of the current page when you click a link.
+            But if you've connected some JavaScript thereto link, you probably don't
+            want this to happen. Using void(0) would stop the page from refreshing
+        </p>
+        <br>
+        <h2>Example:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt;h1 style="color:green"&gt; panchal &lt;/h1&gt; <br>
+            &lt;h3>without JavaScript:void(0)&lt;/h3&gt; <br>
+            &lt;a href="#" ondblclick="alert('Welcome to Geeks for Geeks')"&gt; <br>
+            Double click on me &lt;/a&gt; <br>
+            &lt;a href="#" ondblclick="geeks()"&gt; Double click on me &lt;/a&gt; <br>
+            &lt;script&gt; <br>
+            function geeks(){ <br>
+            document.getElementById("gfg") <br>
+            .innerHTML='Welcome to GeeksforGeeks'; <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;p id="gfg"&gt; &lt;/p&gt; <br>
+        </div>
+    </details>
+    <!-- -->
+    <details>
+        <summary> How can a page be forced to load another page in JavaScript?</summary>
+        <p>
+            In this post, we'll look at how JavaScript can be used to compel one page to load another.
+        </p>
+        <p>
+            <strong>Approach:</strong> To forcefully load another page in Javascript, we can use the
+            window.location attribute inside the script element. It is a pointer to a Location object,
+            which stands in for the document's current location. By visiting a window, we can
+            modify its URL.
+        </p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt;script&gt; <br>
+            window.location = &lt; Path / URL &gt; <br>
+            &lt;/script&gt; <br>
+        </div>
+        <br>
+        <p>
+            In the example above, we can see that modifying the window.location object inside of
+            Javascript allows us to forcefully load any page from Javascript without using a href
+            tag. We'll create a simple working example so we can learn it on the job.
+        </p>
+        <br>
+        <ul style="padding-left: 2%;">
+            <li>
+                Step 1. Make a file called index.html as the first step. Add two buttons and a heading
+                to it. One button forces the loading of a live URL while the other forces the loading
+                of a local HTML page. Two functions are contained in the script> tag; one loads the
+                gfg homepage, and the other uses the window.location property to load a local
+                HTML page.
+            </li>
+            <li>
+                Step 2: Make a newPage.html file. This is the local HTML page that Javascript would
+                load.
+            </li>
+        </ul>
+    </details>
+    <!-- -->
+    <details>
+        <summary>What are the disadvantages of using innerHTML
+            in JavaScript?</summary>
+        <p>
+            Step The Document Object Model (DOM)'s innerHTML attribute is used to set or
+            return an element's HTML content. where the textual content of the HTML element is
+            represented by the return value. It enables JavaScript code to alter a website that is
+            currently being shown. More specifically, it alters or restores an element's internal
+            HTML information. Since it is the simplest approach to manipulate DOM, the
+            innerHTML property is frequently used to alter the contents of webpages. But utilizing
+            innerHTML in JavaScript has several drawbacks.
+
+        </p>
+        <br>
+        <h2>Using JavaScript's innerHTML property has the following drawbacks:</h2>
+        <br>
+        <p>
+            The process of employing innerHTML is more slower since its contents are constructed
+            gradually and because previously parsed elements and contents must be re-parsed,
+            which takes time.
+        </p>
+        <p>
+            keeps any DOM element's event handlers in tact: The new elements produced by
+            automatically setting innerHTML do not acquire event handlers. To do this, one must
+            manually attach the event handlers to new elements and maintain track of the event
+            handlers. On some browsers, this can result in a memory leak.
+        </p>
+        <p>
+            All content has been changed: When you use innerHTML to add, append, delete, or edit
+            material on a webpage, all of the content and any DOM nodes inside that element are
+            replaced and recreated.
+        </p>
+        <p>
+            InnerHTML appending is not supported: In JavaScript, adding is often done with the
+            += operator. However, when using innerHTML to append to an HTML tag, the entire
+            tag is re-parsed.
+        </p>
+        <p>
+            Problem: The old content gets overwritten even while the item is present.object
+            innerHTML is used.Instead of using object.innerHTML += 'html', use innerHTML +
+            'html'. Appending is impossible without repartitioning the entire innerHTML. As a
+            result, using innerHTML becomes extremely sluggish. When dynamic DOM elements
+            must be formed, string concatenation simply cannot scale since it becomes challenging
+            to keep track of the plus signs and quotation marks' openings and closings.
+        </p>
+        <p>
+            Can cause the document to be broken: Since innerHTML does not offer appropriate
+            validation, any legitimate HTML code can be used. The JavaScript document might be
+            broken as a result. Even flawed HTML can be utilized, which could result in unpleasant
+            surprises.
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Create password field with show hide functionalities</summary>
+        <p>
+            This post will demonstrate how to use JavaScript to hide and reveal passwords. When
+            filling out a form, there may be instances where we need to type a password and want to
+            review our previous input. There is a checkbox that, when selected, makes the
+            characters visible so that you can see that. In this lesson, we'll use JavaScript to
+            implement the toggle password feature.
+        </p>
+        <br>
+        <h2>Approach</h2>
+        <br>
+        <ol style="padding-left: 3%;">
+            <li>Create an HTML form with a password-only input field. </li>
+            <li>Make a checkbox that will serve as the toggle. </li>
+            <li>Make a function that responds to the checkbox being clicked by the user.</li>
+        </ol>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write to check whether a number is negative, positive or zero?</summary>
+        <p>
+            function checkNumber(num) { <br>
+            if (typeof num !== 'number') { <br>
+            return 'Input must be a number'; <br>
+            } <br>
+            if (num > 0) { <br>
+            return 'The number is positive.'; <br>
+            } else if (num < 0) { <br>
+                return 'The number is negative.';<br>
+                } else {<br>
+                return 'The number is zero.';<br>
+                }<br>
+                }<br><br>
+
+                // Example usage:<br>
+                let number = -10; // You can change this value to test with different numbers<br>
+                let result = checkNumber(number); <br>
+                console.log(result); <br>
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write to find number is even or odd using ternary operator in JS?</summary>
+        <p>
+            function isEvenOrOdd(num) { <br>
+            return (typeof num === 'number') <br>
+            ? (num % 2 === 0 ? 'The number is even.' : 'The number is odd.') <br>
+            : 'Input must be a number'; <br>
+            } <br>
+            <br>
+            // Example usage:<br>
+            let number = 4; // You can change this value to test with different numbers<br>
+            let result = isEvenOrOdd(number);<br>
+            console.log(result);<br>
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write find maximum number among 3 numbers using ternary operator in JS?</summary>
+        <p>
+            function findMax(a, b, c) { <br>
+            return (a > b && a > c) ? a : (b > c ? b : c); <br>
+            }<br><br>
+
+            // Example usage:<br>
+            let num1 = 10;<br>
+            let num2 = 20;<br>
+            let num3 = 15;<br>
+            let maxNumber = findMax(num1, num2, num3);<br>
+            console.log(`The maximum number among ${num1}, ${num2}, and ${num3} is ${maxNumber}.`); <br>
+
+        </p>
+    </details>
+   <!-- -->
+    <details>
+        <summary>Write to find minimum number among 3 numbers using ternary operator in JS?
+        </summary>
+            <p>
+                function findMin(a, b, c) {<br>
+                return (a < b && a < c) ? a : (b < c ? b : c);<br>
+                    }<br><br>
+
+                    // Example usage:<br>
+                    let num1 = 10;<br>
+                    let num2 = 20;<br>
+                    let num3 = 15;<br>
+                    let minNumber = findMin(num1, num2, num3);<br>
+                    console.log(`The minimum number among ${num1}, ${num2}, and ${num3} is ${minNumber}.`);
+
+            </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write to find the largest of three numbers in JS?</summary>
+        <p>
+            function findLargest(a, b, c) { <br>
+            let largest;<br>
+            if (a > b && a > c) {<br>
+            largest = a;<br>
+            } else if (b > c) {<br>
+            largest = b;<br>
+            } else {<br>
+            largest = c;<br>
+            }<br>
+            return largest;<br>
+            }<br><br>
+
+            // Example usage:<br>
+            let num1 = 10;<br>
+            let num2 = 20;<br>
+            let num3 = 15;<br>
+            let largestNumber = findLargest(num1, num2, num3);<br>
+            console.log(`The largest number among ${num1}, ${num2}, and ${num3} is ${largestNumber}.`);
+
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write to show <br>
+            i. Monday to Sunday using switch case in JS? <br>
+            ii. Vowel or Consonant using switch case in JS?</summary>
+        <p>
+            i) function getDayName(dayNumber) {<br>
+            let dayName;<br>
+            switch(dayNumber) {<br>
+            case 1:<br>
+            dayName = 'Monday';<br>
+            break;<br>
+            case 2:<br>
+            dayName = 'Tuesday';<br>
+            break;<br>
+            case 3:<br>
+            dayName = 'Wednesday';<br>
+            break;<br>
+            case 4:<br>
+            dayName = 'Thursday';<br>
+            break;<br>
+            case 5:<br>
+            dayName = 'Friday';<br>
+            break;<br>
+            case 6:<br>
+            dayName = 'Saturday';<br>
+            break;<br>
+            case 7:<br>
+            dayName = 'Sunday';<br>
+            break;<br>
+            default:<br>
+            dayName = 'Invalid day number';<br>
+            }<br>
+            return dayName;<br>
+            }<br>
+            <br>
+            // Example usage:<br>
+            let dayNumber = 3; // You can change this value to test with different day numbers<br>
+            console.log(`Day ${dayNumber} is ${getDayName(dayNumber)}.`);<br>
+            <br>
+            ii) function checkVowelOrConsonant(letter) {<br>
+            let lowerCaseLetter = letter.toLowerCase();<br>
+            switch(lowerCaseLetter) {<br>
+            case 'a':<br>
+            case 'e':<br>
+            case 'i':<br>
+            case 'o :<br>
+            case 'u':<br>
+            return 'Vowel';<br>
+            default:<br>
+            return 'Consonant';<br>
+            }<br>
+            }<br><br>
+
+            // Example usage:<br>
+            let letter = 'A'; // You can change this value to test with different letters<br>
+            console.log(`${letter} is a ${checkVowelOrConsonant(letter)}.`);<br>
+
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>What are the looping structures in JavaScript? Any one Example?</summary>
+        <p>
+            1.for loop
+            2.while loop
+            3.do...while loop
+            4.for...in loop
+            5.for...of loop
+            for (let i = 1; i <= 5; i++) { <br>
+                console.log(i); <br>
+                } <br>
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write to print factorial of given number?</summary>
+        <p>
+            function factorial(n) {
+            if (n < 0) { return 'Factorial is not defined for negative numbers' ; } let result=1; for (let i=1; i <=n;
+                i++) { result *=i; } return result; } // Example usage: let number=5; // You can change this value to
+                test with different numbers console.log(`The factorial of ${number} is ${factorial(number)}.`); </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?</summary>
+        <p>
+            function reverseNumber(num) { <br>
+            let reversed = 0;<br>
+            while (num > 0) {<br>
+            reversed = reversed * 10 + num % 10;<br>
+            num = Math.floor(num / 10);<br>
+            }<br>
+            return reversed;<br>
+            }<br><br>
+
+            // Example usage:<br>
+            let number = 64728; // You can change this value to test with different numbers<br>
+            let reversedNumber = reverseNumber(number);<br>
+            console.log(`Original number: ${number}`);<br>
+            console.log(`Reversed number: ${reversedNumber}`);<br>
+
+        </p>
+    </details>
+   <!-- -->
+    <details>
+        <summary>Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?</summary>
+        <p>
+            function sumOfDigits(number) { <br>
+            let sum = 0;<br>
+            let num = Math.abs(number); <br>
+            <br>
+            while (num > 0) {<br>
+            sum += num % 10;<br>
+            num = Math.floor(num / 10); <br>
+            }<br>
+            <br>
+            return sum;<br>
+            }<br><br>
+
+            let number = 1523;<br>
+            let result = sumOfDigits(number);<br>
+            console.log(`Sum of digits of ${number} is ${result}.`);<br>
+
+        </p>
+    </details>
+    <details>
+        <summary>
+            Use console.log() and escape characters to print the following pattern in JS?
+        </summary>
+        <p>
+            i) 1 1 1 1 1 <br>
+            2 1 2 4 8<br>
+            3 1 3 9 27<br>
+            4 1 4 16 64<br>
+            5 1 5 25 125<br>
+            <br><br>
+            function generatePattern(rows) {<br>
+            for (let i = 1; i <= rows; i++) { let line=`${i} `; for (let j=1; j <=5; j++) { if (j===1) { line +=`1 `;
+                }<br>
+                else if (j===2) { line +=`${i} `; } else { line +=`${i ** j} `; } } console.log(line); } } <br>
+                usage: generatePattern(5);
+                <br>
+                38) 1 <br>
+                1 0<br>
+                1 0 1<br>
+                1 0 1 0<br>
+                1 0 1 0 1<br><br>
+                function generatePattern(rows) { <br>
+                for (let i = 1; i <= rows; i++) {<br>
+                    let line = '';<br>
+                    for (let j = 1; j <= i; j++) {<br>
+                        line += (j % 2 === 1) ? '1 ' : '0 ';<br>
+                        }<br>
+                        console.log(line.trim());<br>
+                        }<br>
+                        }<br><br>
+
+                        generatePattern(5);<br><br>
+                        ii) 1 <br>
+                        2 3<br>
+                        4 5 6<br>
+                        7 8 9 10<br>
+                        11 12 13 14 15<br><br>
+                        function generatePattern(rows) {<br>
+                        let currentNumber = 1;<br>
+                        for (let i = 1; i <= rows; i++) {<br>
+                            let line = '';<br>
+                            for (let j = 1; j <= i; j++) {<br>
+                                line += `${currentNumber} `;<br>
+                                currentNumber++;<br>
+                                }<br>
+                                console.log(line.trim());<br>
+                                }<br>
+                                }<br><br>
+
+                                generatePattern(5);<br>
+
+                                iii) * <br>
+                                * *<br>
+                                * * *<br>
+                                * * * *<br>
+                                * * * * *<br><br>
+                                function generatePattern(rows) {<br>
+                                for (let i = 1; i <= rows; i++) {<br>
+                                    let line = '';<br>
+                                    for (let j = 1; j <= i; j++) {<br>
+                                        line += '* ';<br>
+                                        }<br>
+                                        console.log(line.trim());<br>
+                                        }<br>
+                                        }<br><br>
+                                        generatePattern(5);<br>
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>
+            Write a JavaScript Program to display the current day and time in the following format.
+            Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+        </summary>
+        <p>
+            function displayDateTime() {
+            // Array of day names
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+            // Get current date and time
+            let currentDate = new Date();
+            let day = days[currentDate.getDay()];
+            let hours = currentDate.getHours();
+            let minutes = currentDate.getMinutes();
+            let period = hours >= 12 ? 'PM' : 'AM';
+
+            // Convert hours from 24-hour format to 12-hour format
+            hours = hours % 12;
+            hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+            // Format minutes with leading zero if less than 10
+            minutes = minutes < 10 ? '0' + minutes : minutes; // Construct the output string let currentTime=`${hours}
+                ${period}: ${hours} : ${minutes}`; // Display the result console.log(`Today is ${day}. Current Time is
+                ${currentTime}`); } // Example usage: displayDateTime(); </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>Write a JavaScript program to get the current date?</summary>
+        <p>
+            function getCurrentDate() {
+            let currentDate = new Date();
+
+            // Extracting day, month, and year
+            let day = currentDate.getDate();
+            let month = currentDate.getMonth() + 1; // Month is zero-indexed, so we add 1
+            let year = currentDate.getFullYear();
+
+            // Formatting month and day with leading zeros if necessary
+            if (month < 10) { month='0' + month; } if (day < 10) { day='0' + day; } // Constructing the formatted date
+                string let formattedDate=`${year}-${month}-${day}`; // Displaying the result console.log(`Current Date:
+                ${formattedDate}`); } // Example usage: getCurrentDate(); </p>
+    </details>
+   <!-- -->
+    <details>
+        <summary>Write a JavaScript program to determine if a variable is array?</summary>
+        <p>
+            function isArray(variable) {
+            return Array.isArray(variable);
+            }
+
+            // Example usage:
+            let arr = [1, 2, 3];
+            let notArr = 'hello';
+
+            console.log(isArray(arr));
+            console.log(isArray(notArr));
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary>What is the drawback of declaring methods directly in JavaScript objects?</summary>
+        <p>
+            There are a couple disadvantages to expressing methods in objects directly in JavaScript as opposed to <br>
+            utilizing prototypes or classes:<br>
+            Memory Usage: Directly declared methods produce object instances, and each instance will have a copy of<br>
+            those methods. Compared to methods defined on the prototype, which are shared by all instances of the
+            same<br>
+            type, this may require more memory.<br><br>
+
+            Performance: Methods that are declared explicitly in objects are recreated for every instance.
+            Performance<br>
+            may be impacted by this, particularly if the techniques call for intricate calculations or processes.<br>
+            Prototype-based techniques, on the other hand, are shared and might be more JavaScript engine
+            optimized.<br><br>
+
+            Impossibility to Modify After Creation: Once an object is instantiated, methods stated immediately within
+            it<br>
+            are not easily modifiable or extensible.<br><br>
+
+            Prototype Chain Considerations: Objects with directly declared methods do not participate in the
+            prototype<br>
+            chain in the same way as objects that use prototypes or classes. This can affect inheritance and method<br>
+            lookup behavior.<br><br>
+
+            Code Maintainability: As the application grows, directly declared methods in objects may become harder
+            to<br>
+            manage and maintain compared to methods organized using prototypes or classes, which provide better<br>
+            structure and organization.<br><br>
+        </p>
+    </details>
+   <!-- -->
+    <details>
+        <summary>Form Validtion in JS?</summary>
+        <p>
+            Form validation in JavaScript is essential for ensuring that data submitted through web forms meets certain
+            <br>
+            criteria or constraints before being processed or submitted to a server. This validation helps prevent<br>
+            invalid or malicious data from being submitted and provides a better user experience by giving immediate<br>
+            feedback to users about input errors.<br>
+        </p>
+    </details>
+    <!-- -->
+    <details>
+        <summary> Form in Email, number, Password, Validation?</summary>
+        <p>
+         <form id="myForm">
+            <label for="name">Name:</label> <br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <button type="submit">Submit</button><br><br>
+        </form>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            <br>
+            event.preventDefault();<br><br>
+        
+            let name = document.getElementById('name').value.trim();<br>
+            let email = document.getElementById('email').value.trim();<br>
+            let password = document.getElementById('password').value.trim();<br>
+            <br>
+            if (name === '') {<br>
+                alert('Name is required');<br>
+                return;<br>
+            }<br>
+            let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;<br>
+            if (!emailRegex.test(email)) {<br>
+                alert('Invalid email format');<br>
+                return;<br>
+            }<br>
+            if (password.length < 8) {<br>
+                alert('Password must be at least 8 characters long');<br>
+                return;<br>
+            }<br>
+            alert('Form submitted successfully');<br>
+        });<br>
+        
+        </p>
+    </details>
+
+    <!-- -->
+     <details>
+        <summary>Find the length of a string without using libraryFunction?</summary>
+     </details>
+</body>
+
+</html>
